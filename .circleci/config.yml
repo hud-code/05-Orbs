@@ -6,12 +6,12 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/base:stable
+      - image: 'cimg/base:stable'
     steps:
       - checkout
       - ruby/install:
-          version: '2.3.8'
-      - run: echo "Ruby 2.3.8 has been installed"
+          version: '1.1.3'
+      - run: echo "Ruby 1.1.3 has been installed"
       - run: ruby -v
 
 workflows:
