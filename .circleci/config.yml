@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  # Add Orb here
+  ruby: circleci/ruby@2.3.8
 
 jobs:
   build:
@@ -9,7 +9,9 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      # Add step below to install Ruby version 2.3.8
+      - ruby/install:
+          version: '2.3.8'
+      - run: echo "Ruby 2.3.8 has been installed"
 
       
       - run: ruby -v
