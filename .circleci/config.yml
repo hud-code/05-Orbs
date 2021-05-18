@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  ruby: circleci/ruby@1.1.3
-
 jobs:
   build:
     docker:
@@ -13,6 +10,10 @@ jobs:
           version: '2.3.8'
       - run: echo "Ruby 2.3.8 has been installed"
       - run: ruby -v
+      
+orbs:
+  ruby: circleci/ruby@1.1.3
+
 
 workflows:
   run-jobs:
